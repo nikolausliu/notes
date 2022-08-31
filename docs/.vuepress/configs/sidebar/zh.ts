@@ -12,6 +12,7 @@ export const sidebarZh: SidebarConfig = {
   '/blog': [
     {
       text: '博客',
+      collapsible: true,
       children: [
         '/blog/garbage-collection.md',
         '/blog/event-loop.md',

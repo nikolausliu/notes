@@ -9,7 +9,11 @@ export const navbarZh: NavbarConfig = [
     text: '博客',
     children: [
       '/blog/garbage-collection.md',
-      '/blog/event-loop.md'
+      '/blog/event-loop.md',
     ]
   },
+  // {
+  //   text: 'Github',
+  //   link: 'https://github.com/nikolausliu/notes'
+  // }
 ]
