@@ -49,3 +49,4 @@ f();
 
 - [Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references)
 - [「硬核JS」你真的了解垃圾回收机制吗](https://juejin.cn/post/6981588276356317214#heading-20)
+- [garbage collection handbook](https://gchandbook.org/)
