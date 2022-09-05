@@ -12,7 +12,7 @@
 
 在JavaScript中，**值的声明**和**函数调用**都会导致自动地分配内存。
 
-决定内存何时不再需要了是困难的。低级语言让程序员来决定释放内存地时机，JavaScript让垃圾收集器来决定这个时机，但这也只是一个近似值，因为一块内存何时不再需要是无法确定的。
+决定内存何时不再需要了是困难的。低级语言让程序员来决定释放内存的时机，JavaScript让垃圾收集器来决定这个时机，但这也只是一个近似值，因为一块内存何时不再需要是无法确定的。
 
 ## 垃圾回收
 
@@ -48,5 +48,6 @@ f();
 ## 参考
 
 - [Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references)
-- [「硬核JS」你真的了解垃圾回收机制吗](https://juejin.cn/post/6981588276356317214#heading-20)
 - [garbage collection handbook](https://gchandbook.org/)
+- [垃圾回收](https://zh.javascript.info/garbage-collection)
+- [「硬核JS」你真的了解垃圾回收机制吗](https://juejin.cn/post/6981588276356317214#heading-20)
