@@ -9,20 +9,20 @@ export const sidebarZh: SidebarConfig = {
       ],
     },
   ],
-  '/blog': [
+  '/advance': [
     {
-      text: '博客',
-      collapsible: true,
+      text: '进阶',
+      // collapsible: true,
       children: [
-        '/blog/garbage-collection.md',
-        '/blog/event-loop.md',
+        '/advance/garbage-collection.md',
+        '/advance/event-loop.md',
       ],
     },
   ],
   '/problems': [
     {
       text: '一题',
-      collapsible: true,
+      // collapsible: true,
       children: [
         '/problems/01.md',
       ],

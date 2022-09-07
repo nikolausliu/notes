@@ -18,6 +18,7 @@ export default defineUserConfig({
         repo: 'nikolausliu/notes',
         navbar: navbarZh,
         sidebar: sidebarZh,
+        // sidebarDepth: 0,
         editLink: false,
         contributors: false,
         // custom containers

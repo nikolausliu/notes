@@ -6,16 +6,11 @@ export const navbarZh: NavbarConfig = [
     link: '/',
   },
   {
-    text: '博客',
-    children: [
-      '/blog/garbage-collection.md',
-      '/blog/event-loop.md',
-    ]
+    text: '进阶',
+    link: '/advance',
   },
   {
     text: '一题',
-    children: [
-      '/problems/01.md'
-    ]
-  }
+    link: '/problems'
+  },
 ]
