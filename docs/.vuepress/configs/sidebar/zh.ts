@@ -19,4 +19,13 @@ export const sidebarZh: SidebarConfig = {
       ],
     },
   ],
+  '/problems': [
+    {
+      text: '一题',
+      collapsible: true,
+      children: [
+        '/problems/01.md',
+      ],
+    },
+  ],
 }

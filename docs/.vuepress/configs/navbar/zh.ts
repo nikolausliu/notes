@@ -12,8 +12,10 @@ export const navbarZh: NavbarConfig = [
       '/blog/event-loop.md',
     ]
   },
-  // {
-  //   text: 'Github',
-  //   link: 'https://github.com/nikolausliu/notes'
-  // }
+  {
+    text: '一题',
+    children: [
+      '/problems/01.md'
+    ]
+  }
 ]
