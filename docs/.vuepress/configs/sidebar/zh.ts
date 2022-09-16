@@ -16,6 +16,13 @@ export const sidebarZh: SidebarConfig = {
       children: [
         '/advance/garbage-collection.md',
         '/advance/event-loop.md',
+        {
+          text: '手写实现',
+          children: [
+            '/advance/handwriting/stack.md',
+            '/advance/handwriting/promise.md',
+          ]
+        }
       ],
     },
   ],
@@ -25,7 +32,15 @@ export const sidebarZh: SidebarConfig = {
       // collapsible: true,
       children: [
         '/problems/01.md',
-        '/problems/02.md',
+        '/problems/02.md',        
+      ],
+    },
+  ],
+  '/blog': [
+    {
+      text: '博客',
+      children: [
+        '/blog/vite-envs.md',        
       ],
     },
   ],

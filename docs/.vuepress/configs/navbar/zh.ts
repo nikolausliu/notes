@@ -13,4 +13,8 @@ export const navbarZh: NavbarConfig = [
     text: '一题',
     link: '/problems'
   },
+  {
+    text: '博客',
+    link: '/blog'
+  },
 ]
