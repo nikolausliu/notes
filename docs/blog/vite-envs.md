@@ -155,7 +155,7 @@ export function loadEnv(  // 967行
 ```
 可以看到代码中定义了`loadEnv`函数，代码内容较多，我在其中做了注释，这里不再赘述。我画了一张思维导图，应该能更清晰的描述这个过程。
 
-![](/imgs/import.meta.env.prod.png)
+![](./vite-envs-1.png)
 
 那到这里，其实我们可以确定了，如果我们没有在`.env.${mode}`文件中设置过`NODE_ENV`变量，那`import.meta.env.PROD`的值就是`import.meta.env.MODE === 'production'`的返回值，与我们上面的猜想一致。
 
