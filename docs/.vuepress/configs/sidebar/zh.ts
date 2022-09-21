@@ -22,6 +22,12 @@ export const sidebarZh: SidebarConfig = {
             '/advance/handwriting/stack.md',
             '/advance/handwriting/promise.md',
           ]
+        },
+        {
+          text: '网络安全',
+          children: [
+            '/advance/security/authentication.md'
+          ]
         }
       ],
     },

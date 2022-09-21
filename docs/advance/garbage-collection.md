@@ -45,6 +45,8 @@ f();
 
 再标记清除算法下，循环引用不再是问题了。以上面的代码为例，因为`f()`执行完后，在函数外部就无法从根对象访问到`x`和`y`了。
 
+![思维导图](./assets/garbage-collection-1.svg)
+
 ## 参考
 
 - [Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references)
