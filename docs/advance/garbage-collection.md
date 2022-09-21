@@ -51,3 +51,4 @@ f();
 - [garbage collection handbook](https://gchandbook.org/)
 - [垃圾回收](https://zh.javascript.info/garbage-collection)
 - [「硬核JS」你真的了解垃圾回收机制吗](https://juejin.cn/post/6981588276356317214#heading-20)
+- [A tour of V8: Garbage Collection](https://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection)

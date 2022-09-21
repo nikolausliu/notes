@@ -21,23 +21,23 @@ Vite常用的命令有`vite dev`和`vite build`，项目会部署在开发环境
 
 ## 实现
 
-简单看了下[Vite官网](https://cn.vitejs.dev/guide/env-and-mode.html)，发现它有一个**模式(mode)**的概念恰好和我们上面说得模式的概念一致。
+简单看了下[Vite官网](https://cn.vitejs.dev/guide/env-and-mode.html)，发现它有一个 **模式(mode)** 的概念恰好和我们上面说得模式的概念一致。
 
 - `mode`值可以使用`import.meta.env.MODE`访问
 - 不同的vite命令，`mode`有各自的默认值：
   - `vite dev`：默认`development`
   - `vite build`：默认`production`
 - `mode`默认值可以通过传递 `--mode` 选项标志来覆盖命令使用的默认模式：
-  - `vite dev:prod --mode production`
-  - `vite build:dev --mode development`
-- Vite会使用`dotenv`自动加载项目根目录下的`.env[.mode]`下的环境变量
+  - `vite dev --mode production`
+  - `vite build --mode development`
+- Vite会使用`dotenv`自动加载项目根目录下的`.env.${mode}`下的环境变量
 
 现在我们已经可以通过`import.meta.env.MODE`来区分不同的模式了，那么怎么区分不同的阶段呢？我注意到这两个变量：
 
 > - `import.meta.env.DEV`: {boolean} 应用是否运行在开发环境 (永远与 import.meta.env.PROD相反)
 > - `import.meta.env.PROD`: {boolean} 应用是否运行在生产环境。
 
-我原本以为这两个变量就正好对应了开发阶段和构建阶段，但测试后发现其实只是相当于`mode`的一个别名：
+我原本以为这两个变量就正好对应了开发阶段和构建阶段，但测试后发现它其实只和`mode`有关，与所处的阶段没有关系：
 
 ```js
 import.meta.env.DEV === (import.meta.env.MODE === 'development')
@@ -46,7 +46,7 @@ import.meta.env.PROD === (import.meta.env.MODE === 'production')
 
 那有没有办法使得`import.meta.env.DEV`和`import.meta.env.PROD`符合我们的预期与阶段对应呢？我查看了Vite源码发现是可行的。
 
-首先在Vite源码工程中区分大小写全局查找`PROD`，定位到`import.meta.env.PROD`定义在`/packages/vite/src/node/config.ts`文件下。
+首先在[Vite源码仓库](https://github.com/vitejs/vite)页面按下键盘的`.`键，即可跳转到在线vscode编辑器查看仓库源码。我们区分大小写全局查找`PROD`，定位到`import.meta.env.PROD`定义在`/packages/vite/src/node/config.ts`文件下。
 
 ```ts
 const resolved: ResolvedConfig = {
