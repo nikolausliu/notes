@@ -26,7 +26,8 @@ export const sidebarZh: SidebarConfig = {
         {
           text: '网络安全',
           children: [
-            '/advance/security/authentication.md'
+            '/advance/security/authentication.md',
+            '/advance/security/cross-domain.md',
           ]
         }
       ],
