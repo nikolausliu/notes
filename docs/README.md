@@ -3,7 +3,7 @@ home: true
 title: 首页
 actions:
   - text: Get Started
-    link: /blog/garbage-collection.md
+    link: /advance
     type: primary
 features:
   - title: VuePress
