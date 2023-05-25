@@ -14,6 +14,7 @@ export const sidebarZh: SidebarConfig = {
       text: '进阶',
       // collapsible: true,
       children: [
+        '/advance/scope-chain.md',
         '/advance/garbage-collection.md',
         '/advance/event-loop.md',
         {
