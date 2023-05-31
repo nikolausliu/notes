@@ -29,5 +29,6 @@ type Boolean = True|False;
 
 ## 参考
 
-- [【译】谈一谈JavaScript的内存模型](https://segmentfault.com/a/1190000023148901)
 - [JavaScript Memory Model Demystified](https://www.zhenghao.io/posts/javascript-memory)
+- [【译】谈一谈JavaScript的内存模型](https://segmentfault.com/a/1190000023148901)
+- [JavaScript中变量存储在堆中还是栈中？——六耳​的回答](https://www.zhihu.com/question/482433315/answer/2083349992)
