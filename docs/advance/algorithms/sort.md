@@ -26,8 +26,10 @@ function bubbleSort(array) {
     // 内层循环需要遍历到倒数第2位，这样 j + 1 是倒数第1位，正好比较到末尾
     // 另外已经比较完的数字就没必要再比较了，外层的i就代表比较完了几轮，要减去i
     for (let j = 0; j < array.length - 1 - i; j++) {
-      // 交换比较的两项的位置
-      [array[j], array[j + 1]] = [array[j + 1], array[j]]
+      if (array[j] > array[j + 1]) {
+        // 交换比较的两项的位置
+        [array[j], array[j + 1]] = [array[j + 1], array[j]]
+      }
     }
   }
   return array
