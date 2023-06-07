@@ -48,6 +48,7 @@ export const sidebarZh: SidebarConfig = {
       children: [
         '/problems/01.md',
         '/problems/02.md',        
+        '/problems/03.md',        
       ],
     },
   ],
@@ -55,7 +56,7 @@ export const sidebarZh: SidebarConfig = {
     {
       text: '博客',
       children: [
-        '/blog/vite-envs.md',   
+        '/blog/vite-envs.md',
         '/blog/upgrade-axios.md',   
       ],
     },
