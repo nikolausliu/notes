@@ -22,6 +22,7 @@ export const sidebarZh: SidebarConfig = {
         {
           text: '手写实现',
           children: [
+            '/advance/handwriting/deepClone.md',
             '/advance/handwriting/stack.md',
             '/advance/handwriting/promise.md',
           ]
