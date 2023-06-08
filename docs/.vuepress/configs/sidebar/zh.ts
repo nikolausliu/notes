@@ -16,6 +16,7 @@ export const sidebarZh: SidebarConfig = {
       children: [
         '/advance/javascript-memory-model.md',
         '/advance/scope-chain.md',
+        '/advance/object-class-extends.md',
         '/advance/garbage-collection.md',
         '/advance/event-loop.md',
         {
