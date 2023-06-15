@@ -31,6 +31,7 @@ export const sidebarZh: SidebarConfig = {
           text: '算法',
           children: [
             '/advance/algorithms/sort.md',
+            '/advance/algorithms/dynamic-programming.md',
           ]
         },
         {
