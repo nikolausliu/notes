@@ -51,7 +51,8 @@ export const sidebarZh: SidebarConfig = {
       children: [
         '/problems/01.md',
         '/problems/02.md',        
-        '/problems/03.md',        
+        '/problems/03.md',
+        '/problems/04.md',        
       ],
     },
   ],
