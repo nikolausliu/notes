@@ -6,7 +6,7 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: '刘同学的前端笔记',
+      title: '前端进阶笔记',
       description: '记录我的学习过程',
     },
   },

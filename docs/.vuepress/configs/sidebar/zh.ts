@@ -14,6 +14,12 @@ export const sidebarZh: SidebarConfig = {
       text: '进阶',
       // collapsible: true,
       children: [
+        {
+          text: '浏览器工作原理',
+          children: [
+            '/advance/how-browser-works/chrome-architecture-model.md'
+          ]
+        },
         '/advance/javascript-memory-model.md',
         '/advance/scope-chain.md',
         '/advance/object-class-extends.md',
