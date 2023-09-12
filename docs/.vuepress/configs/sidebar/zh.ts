@@ -59,6 +59,7 @@ export const sidebarZh: SidebarConfig = {
         '/problems/02.md',        
         '/problems/03.md',
         '/problems/04.md',        
+        '/problems/05.md',        
       ],
     },
   ],
