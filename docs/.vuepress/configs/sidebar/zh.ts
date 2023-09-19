@@ -68,7 +68,8 @@ export const sidebarZh: SidebarConfig = {
       text: '博客',
       children: [
         '/blog/vite-envs.md',
-        '/blog/upgrade-axios.md',   
+        '/blog/upgrade-axios.md',
+        '/blog/ant-design-vue-modal-feature.md'
       ],
     },
   ],
