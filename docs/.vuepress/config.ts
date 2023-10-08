@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { navbarZh, sidebarZh } from './configs/index.js'
+import vuepressPluginAnchorRight from 'vuepress-plugin-anchor-right'
 
 export default defineUserConfig({
   locales: {
@@ -18,7 +19,7 @@ export default defineUserConfig({
         repo: 'nikolausliu/notes',
         navbar: navbarZh,
         sidebar: sidebarZh,
-        // sidebarDepth: 0,
+        sidebarDepth: 0,
         editLink: false,
         contributors: false,
         // custom containers
@@ -40,8 +41,9 @@ export default defineUserConfig({
     }
   }),
   plugins: [
-    {
-      name: 'vuepress-plugin-right-anchor',
-    }
+    [vuepressPluginAnchorRight()]
+    // {
+    //   name: 'vuepress-plugin-right-anchor',
+    // }
   ]
 })

@@ -11,44 +11,79 @@ export const sidebarZh: SidebarConfig = {
   ],
   '/advance': [
     {
-      text: '进阶',
-      // collapsible: true,
+      text: '浏览器工作原理',
       children: [
-        {
-          text: '浏览器工作原理',
-          children: [
-            '/advance/how-browser-works/chrome-architecture-model.md'
-          ]
-        },
-        '/advance/javascript-memory-model.md',
-        '/advance/scope-chain.md',
-        '/advance/object-class-extends.md',
-        '/advance/garbage-collection.md',
-        '/advance/event-loop.md',
-        {
-          text: '手写实现',
-          children: [
-            '/advance/handwriting/deepClone.md',
-            '/advance/handwriting/stack.md',
-            '/advance/handwriting/promise.md',
-          ]
-        },
-        {
-          text: '算法',
-          children: [
-            '/advance/algorithms/sort.md',
-            '/advance/algorithms/dynamic-programming.md',
-          ]
-        },
-        {
-          text: '网络安全',
-          children: [
-            '/advance/security/authentication.md',
-            '/advance/security/cross-domain.md',
-          ]
-        }
+        '/advance/how-browser-works/chrome-architecture-model.md',
       ],
+      
     },
+    '/advance/javascript-memory-model.md',
+    '/advance/scope-chain.md',
+    '/advance/object-class-extends.md',
+    '/advance/garbage-collection.md',
+    '/advance/event-loop.md',
+    {
+      text: '手写实现',
+      children: [
+        '/advance/handwriting/deepClone.md',
+        '/advance/handwriting/stack.md',
+        '/advance/handwriting/promise.md',
+      ]
+    },
+    {
+      text: '算法',
+      children: [
+        '/advance/algorithms/sort.md',
+        '/advance/algorithms/dynamic-programming.md',
+      ]
+    },
+    {
+      text: '网络安全',
+      children: [
+        '/advance/security/authentication.md',
+        '/advance/security/cross-domain.md',
+      ]
+    },
+    // {
+    //   text: '进阶',
+    //   // collapsible: true,
+    //   children: [
+    //     {
+    //       text: '浏览器工作原理',
+    //       link: '/advance/how-browser-works/',
+    //       children: [
+    //         '/advance/how-browser-works/chrome-architecture-model.md'
+    //       ]
+    //     },
+    //     '/advance/javascript-memory-model.md',
+    //     '/advance/scope-chain.md',
+    //     '/advance/object-class-extends.md',
+    //     '/advance/garbage-collection.md',
+    //     '/advance/event-loop.md',
+    //     {
+    //       text: '手写实现',
+    //       children: [
+    //         '/advance/handwriting/deepClone.md',
+    //         '/advance/handwriting/stack.md',
+    //         '/advance/handwriting/promise.md',
+    //       ]
+    //     },
+    //     {
+    //       text: '算法',
+    //       children: [
+    //         '/advance/algorithms/sort.md',
+    //         '/advance/algorithms/dynamic-programming.md',
+    //       ]
+    //     },
+    //     {
+    //       text: '网络安全',
+    //       children: [
+    //         '/advance/security/authentication.md',
+    //         '/advance/security/cross-domain.md',
+    //       ]
+    //     }
+    //   ],
+    // },
   ],
   '/problems': [
     {
@@ -59,7 +94,10 @@ export const sidebarZh: SidebarConfig = {
         '/problems/02.md',        
         '/problems/03.md',
         '/problems/04.md',        
-        '/problems/05.md',        
+        '/problems/05.md',   
+        '/problems/06.md',   
+        '/problems/07.md',   
+        '/problems/08.md',   
       ],
     },
   ],
