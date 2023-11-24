@@ -25,9 +25,24 @@ export const sidebarZh: SidebarConfig = {
     {
       text: '手写实现',
       children: [
-        '/advance/handwriting/deepClone.md',
+        '/advance/handwriting/deep-clone.md',
         '/advance/handwriting/stack.md',
         '/advance/handwriting/promise.md',
+        '/advance/handwriting/event-emitter.md',
+      ]
+    },
+    {
+      text: '设计模式',
+      children: [
+        '/advance/design-patterns/index.md',
+        '/advance/design-patterns/singleton.md',
+        '/advance/design-patterns/decorator.md',
+        '/advance/design-patterns/adapter.md',
+        '/advance/design-patterns/proxy.md',
+        '/advance/design-patterns/strategy.md',
+        '/advance/design-patterns/state.md',
+        '/advance/design-patterns/observer.md',
+        '/advance/design-patterns/iterator.md',
       ]
     },
     {
