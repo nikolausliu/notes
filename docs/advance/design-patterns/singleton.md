@@ -56,7 +56,7 @@ console.log(s1 === s2)
 [playground](https://www.typescriptlang.org/zh/play?noImplicitAny=false&filetype=js#code/GYVwdgxgLglg9mABAZRmA5gGwKZQQCgEpEBvAXwChUMc8wA6dXASTAGcoBDSbRAXkT5QkWAkHESFRIlqI0HbhF4CwITJimIATrhBakw6PCRFSm6TGCCAhPK48J56XPb2l-RGGwB3FGiy4BIROlM7auvouCjyalGSERBQQCByIbACMHtQBdIwsrorYicmuaQBMWf60CHlQrNFKxSlwOPSYcOj4Gfx8AmxlhEA)
 
 ## Vuex中的“单例模式”
-Vuex使用**单一状态树**，我们在使用Vuex的时候通常也只会实例化一个Store，然而Vuex种的Store是一个“假单”例”。
+Vuex使用**单一状态树**，我们在使用Vuex的时候通常也只会实例化一个Store，然而Vuex中的Store是一个“假单例”。
 
 下面是Store类的部分源码：
 

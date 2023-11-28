@@ -242,6 +242,29 @@ eventChannel.emit(pub2.eventName, pub2.data)
 
 [playground](https://www.typescriptlang.org/zh/play?#code/C4TwDgpgBAwghgGwQIzgYwNZQLxQBQB0RcATgOYDOAXFAK4B2G9A9gO70DaAugJQ4B8UAG7MAlgBMAUJID0MqIEXlQMB6gUADJo+sAgkAZumgAFWsgSiKAC21QA3pKhQIQiJoBycALYQaFYCQ1k7KHE4YDgaOHoQSQBfaTkoQCLowFA0tQ0tXX0oAGVjCjQ-ZCtbe0dnYDdPb19-QLREFHQMGngkVEwYuPlAaLlAN7lAbgNAfr91TW09NGgAUSdNGHMI+ggEG0Dmeho8UtcPLygfP3oyABooOtbG5vq2jD5sQREJFZ0ddc3y7ar9o5PL89gfzBudzEUhK7lEwBe0zelV21QOx2CoXCkUBwmBHUkaAQcAoFFgq3yEC0UzKs3miygoncYAQEE8mjxJJmc3oCyWxSgYD8QhC0BZ4lpJGoUAAsnAwAAePb+Y4tBqYbj8aT2NCrPa0NDAZgkPB8Dn2YDmMwEfmCvG4BasUXi3WBWKBMDGUxoKCrDZQio7aXw75nTAXP3XZb2eyiHT4ACEhuNpu0FBNOPdZU9PD1gRDUGj8djQoIFCJSa2nmO3B46ag9ozWYT9AFcYIZALrxTEYIjoseFO8uuduVnKdohdzCehehXrhXy7VwD3bTGdV9B8vu75szRuzETrucbwFHKfLYfwU8aFDnGZOauAlNrEAAHjhl1d4xpxHeAPI6Tv-HvnynhvAvneUARtguAALQAIxnr+x6YPGFA0oOEAATet7HFB5b2LEGbYRWgQOgOLp0uC+DNu8sKfMcRAEKQlA0AwTBsJwvDBiGC5LrBGCrtWObxjue7bGWGaHl+ganqx87fvGOjahM6DmHgomzgIEnnpxhDEOQp6YRWQkhrhsT2liOJ4jABIkESEBGCYZiWCQlLUrS9LAHi1mmBYRQETZREeuR3oBPYjreUEIRhFAERRCql4kBqWo6mRML+QioXIiA0FrsaCXQLgWXltWiJwA+BW9kZ2K4vi9CEloOTIHkBRWFSNJ0mUeI1XVoiFPZHJBc6Di+YlE5eb1nEzlctTRbF2oCQNlGPr8cpXOl1ZZQ+uVVuuBCcQ+nElZ0UCABSugDR8oAWP-SOxV4UMYEEPpaFVVRAbX5B12h4AA5BZcDiCAr3HBpNFaaiHLscwtIEAgzBkG9l3IBBgClxoAbKaAAxKH1fb0P3hQDMRlpil67MYABMN0QFaZmVRZ1W5E9nVvSj32-dRtHibcrHA6D4OQ690P4wjyMQJ9IBo8cjNltE2Pnf2MNEyT5mWW5tkve9fNfejHKeLicCNjQr1BRBP2BAVNAQVjZ240FhMWsTd3k1ZA4eTqiv8yrgRqxQGs7NrBN6-YBtQPjxs44uV6vGSrIUhb0tk5ZTLACHbK2sHLJsgQbrQxBBBZccqebd+ZYJ+SCDJ-QeBc+n-UQJnBPZ4GudQrHizp2Cu466XybbMczcFTXpKJ-Xw6fiXGd48g+NV7Okh56HBfEU3leD2bBCd3EABUS92EvUAcAAMm+ADiXA0AARKnPO070B-HBv1gHy7bsH4fOvnwfBV31AEHRFwUBrxv2974fXMn0rAWPRz72A4FfG+jYX4HwfocJ+oUX5vw-l-Leu995QCPldAB-Mz4XzAdfCA6tIH3wJo-Z+NB8bv0-lAJeMhpB0KAA)
 
-其实上面实现的发布订阅模式和我们常见的实现`EventEmitter`基本一致，不过是弱化了`Publisher`和`Subscriber`两个类，只实现一个`EventChannel`。
+发布订阅模式的核心在于`EventChannel`，所以很多实现中可以不需要`Publisher`类和`Subscriber`类。比如上面的用例，如果只有`EventChannel`类，功能也是一样的：
+
+```ts
+const eventChannel = new ConcreteEventChannel()
+function callback1(...args) {
+  console.log('sub1接收到ready事件', args)
+}
+function callback2(...args) {
+  console.log('sub2接收到ready事件', args)
+}
+eventChannel.on('ready', callback1)
+eventChannel.on('ready', callback2)
+eventChannel.emit('ready', {
+  message: 'pub1',
+  data: 1
+})
+eventChannel.off('ready', callback2)
+eventChannel.emit('ready', {
+  message: 'pub2',
+  data: 2
+})
+```
+
+比如我们常见的`EventEmitter`的实现就是这样，可以参考我的[这篇文章](https://nikosnotes.netlify.app/advance/handwriting/event-emitter.html)。
 
 
