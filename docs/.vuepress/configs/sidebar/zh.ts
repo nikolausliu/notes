@@ -26,6 +26,7 @@ export const sidebarZh: SidebarConfig = {
     {
       text: '手写实现',
       children: [
+        '/advance/handwriting/debounce-throttle.md',
         '/advance/handwriting/deep-clone.md',
         '/advance/handwriting/stack.md',
         '/advance/handwriting/promise.md',
